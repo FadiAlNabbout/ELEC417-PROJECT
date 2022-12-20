@@ -4,7 +4,7 @@ import hashlib
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # get local machine name
 host = socket.gethostname()
-port = 4041
+port = 9991
 # connection to hostname on the port.
 client_socket.connect((host, port))
 # send the username and hashed password to the server

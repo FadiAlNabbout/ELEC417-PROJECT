@@ -4,7 +4,7 @@ import hashlib
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # get local machine name
 host = socket.gethostname()
-port = 4041
+port = 9991
 # bind the socket to a public host, and a port
 server_socket.bind((host, port))
 # become a server socket
@@ -27,8 +27,8 @@ while True:
 	if username in credentials and credentials[username] == hashed_password:
 		client_socket.send("Authentication successful".encode())
 # process requests from the client
-while True:
-	data = client_socket.recv(1024).decode()
+	while True:
+		data = client_socket.recv(1024).decode()
 	if not data:
 		break
 		print("Received: %s" % data)
