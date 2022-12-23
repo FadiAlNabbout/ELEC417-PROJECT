@@ -1,0 +1,8 @@
+#! /bin/bash
+rsync server.py pi@192.168.0.46:/home/pi/devlp/python/net
+rsync exit.py pi@192.168.0.95:/home/pi/devlp/python/net
+rsync guard.py pi@192.168.0.109:/home/pi/devlp/python/net
+ssh pi@192.168.0.46 python3 /home/pi/devlp/python/net/server.py &
+ssh pi@192.168.0.95 python3 /home/pi/devlp/python/net/exit.py &
+ssh pi@192.168.0.109 python3 /home/pi/devlp/python/net/guard.py &
+python3 client.py
