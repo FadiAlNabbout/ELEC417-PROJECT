@@ -1,0 +1,4 @@
+pip install socket
+pip install stem
+pip install hashlib
+pip install requests
