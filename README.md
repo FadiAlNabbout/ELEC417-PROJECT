@@ -2,6 +2,8 @@
 Virtual machine used: kali linux 2020.3-vbox-amd64
 Repository for the final project for the "Communication networks : protocols and architectures" course of the ULB. The aim of the project is to design a TOR network and implements it in python.
 
+Implementation 1 and 2 include their own brief READMEs to run them.
+
 # how to run the codes:
 python3 server.py
 python3 client.py
